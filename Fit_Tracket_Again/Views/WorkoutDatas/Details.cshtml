@@ -1,0 +1,48 @@
+﻿@model Fit_Tracket_Again.Models.WorkoutData
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WorkoutData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutWeight)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutWeight)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutReps)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutReps)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkoutSets)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkoutSets)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

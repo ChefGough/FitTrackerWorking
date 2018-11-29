@@ -1,0 +1,54 @@
+﻿@model Fit_Tracket_Again.Models.WorkoutData
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>WorkoutData</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="WorkoutTime" class="control-label"></label>
+                <input asp-for="WorkoutTime" class="form-control" />
+                <span asp-validation-for="WorkoutTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkoutName" class="control-label"></label>
+                <input asp-for="WorkoutName" class="form-control" />
+                <span asp-validation-for="WorkoutName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkoutWeight" class="control-label"></label>
+                <input asp-for="WorkoutWeight" class="form-control" />
+                <span asp-validation-for="WorkoutWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkoutReps" class="control-label"></label>
+                <input asp-for="WorkoutReps" class="form-control" />
+                <span asp-validation-for="WorkoutReps" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkoutSets" class="control-label"></label>
+                <input asp-for="WorkoutSets" class="form-control" />
+                <span asp-validation-for="WorkoutSets" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

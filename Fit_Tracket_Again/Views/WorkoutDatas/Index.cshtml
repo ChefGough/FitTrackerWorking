@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Fit_Tracket_Again.Models.WorkoutData>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkoutTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkoutName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkoutWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkoutReps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkoutSets)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkoutTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkoutName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkoutWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkoutReps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkoutSets)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
