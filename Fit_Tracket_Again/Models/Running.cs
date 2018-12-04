@@ -7,8 +7,10 @@ namespace Fit_Tracket_Again.Models
 {
     public class Running
     {
+        public int ID { get; set; }
+        public DateTime Date { get; set; }
         public decimal Distance { get; set; }
-        public decimal Time { get; set; }
+        public TimeSpan Time { get; set; }
         public string RunType { get; set; }
     }
 }
