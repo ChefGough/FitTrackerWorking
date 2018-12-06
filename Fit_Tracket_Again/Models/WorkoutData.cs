@@ -8,7 +8,7 @@ namespace Fit_Tracket_Again.Models
     public class WorkoutData
     {
         public int ID { get; set; }
-        public DateTime Date {get;set;}
+        public DateTime WorkoutTime {get;set;}
         public String WorkoutName { get; set; }
         public int WorkoutWeight { get; set; }
         public int WorkoutReps { get; set; }
